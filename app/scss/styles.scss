@@ -22,7 +22,7 @@ $breakpoint-lg: 717px;
 
 @import "colors";
 
-.chart-area {
+.chart-area-dow-30k {
   @import "type";
   @import "highcharts";
 
@@ -51,8 +51,8 @@ $breakpoint-lg: 717px;
     width: 100%;
     height: 300px;
     margin-top: -10px;
-    @include sm-md-xl {
-      height: 400px;
+    @include x-small {
+      margin-bottom: 30px;
     }
   }
 
@@ -60,7 +60,102 @@ $breakpoint-lg: 717px;
     width: 214px;
     margin-top: 20px;
   }
+
+  & #chart-container-dow-30k-1 {
+    .highcharts-color-0 {
+      fill: $green-primary;
+      stroke: $green-primary;
+    }
+  }
+
+  & #chart-container-dow-30k-2 {
+    height: 400px;
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+    .highcharts-color-0 {
+      fill: $slate-secondary-3;
+      stroke: $slate-secondary-3;
+    }
+    
+    .highcharts-color-1 {
+      fill: $green-secondary-6;
+      stroke: $green-secondary-6;
+    }
+    
+    .highcharts-color-2 {
+      fill: $green-secondary-5;
+      stroke: $green-secondary-5;
+    }
+    
+    .highcharts-color-3 {
+      fill: $green-secondary-4;
+      stroke: $green-secondary-4;
+    }
+    
+    .highcharts-color-4 {
+      fill: $green-secondary-3;
+      stroke: $green-secondary-3;
+    }
+    
+    .highcharts-color-5 {
+      fill: $green-secondary-2;
+      stroke: $green-secondary-2;
+    }
+  }
+
+  & #chart-container-dow-30k-3 {
+    .highcharts-yaxis-labels {
+      & span:last-child {
+        transform: translate(10px,0) !important;
+        &:after {
+          content: "%";
+      }
+      }
+    }
+
+    .highcharts-axis-line {
+      stroke: none;
+    }
+
+    .highcharts-grid-line {
+      &:nth-child(3) {
+        stroke: black;
+      }
+    }
+    
+    .highcharts-color-2 {
+      fill: $slate-secondary-4;
+      stroke: $slate-secondary-4;
+    }
+    
+  }
   
+
+& #chart-container-dow-30k-4 {
+  height: 250px;
+  .highcharts-color-0 {
+    fill: $slate-secondary-3;
+    stroke: $slate-secondary-3;
+    &:nth-child(4) {
+      fill: $green-primary;
+    stroke: $green-primary;
+    }
+  }
+
+  .highcharts-yaxis-labels {
+    & span:first-child {
+      &:after {
+        content: "%";
+    }
+    }
+  }
+}
 }
 
 // @import "social";
